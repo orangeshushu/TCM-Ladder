@@ -1,4 +1,4 @@
-# TTCM-Ladder: A Benchmark for Multimodal Question Answering on Traditional Chinese Medicine
+# TCM-Ladder: A Benchmark for Multimodal Question Answering on Traditional Chinese Medicine
 
 ## 📌 Abstract
 
