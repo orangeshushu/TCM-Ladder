@@ -6,7 +6,7 @@ from tqdm import tqdm
 from PIL import Image
 
 # Gemini API 设置
-GEMINI_API_KEY = "AIzaSyDBlX4nORi4fXBt000SA-on8Qa4G-h9zq4"  # 替换为你的 API 密钥
+GEMINI_API_KEY = ""  # 替换为你的 API 密钥
 MODEL_NAME = "gemini-2.0-flash"
 
 # 配置 Gemini
