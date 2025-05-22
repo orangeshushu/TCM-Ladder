@@ -1,0 +1,46 @@
+
+model_name_or_path: Qwen/Qwen2.5-7B-Instruct
+model_revision: main
+torch_dtype: bfloat16
+attn_implementation: flash_attention_2
+dataset_name: none
+dataset_prompt_column: problem
+system_prompt: "You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer. The response cannot be more than 400 words. Each question has only one answer, A-E. Respond in the following format: <think>\n...\n</think>\n<answer>\n...答案:A-E...\n</answer>. Do not respond with another tag. Do not repeat the response."
+bf16: true
+use_vllm: false
+do_eval: false
+gradient_accumulation_steps: 4
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+hub_model_id: Qwen2.5-7B-Instruct-GRPO
+hub_strategy: every_save
+learning_rate: 5.0e-07
+log_completions: false
+log_level: info
+logging_first_step: true
+logging_steps: 1
+logging_strategy: steps
+lr_scheduler_type: cosine
+max_prompt_length: 512
+max_completion_length: 512
+max_steps: -1
+num_generations: 6
+num_train_epochs: 2
+output_dir: ./data/Qwen2.5-7B-Instruct-GRPO
+overwrite_output_dir: true
+per_device_eval_batch_size: 12
+per_device_train_batch_size: 12
+push_to_hub: false
+report_to:
+- tensorboard
+reward_weights:
+- 5
+- 1
+- 1
+save_strategy: "steps"
+save_steps: 50
+save_total_limit: 10
+seed: 42
+warmup_ratio: 0.1
+beta: 0.0
